@@ -5,6 +5,7 @@ import { useState } from "react"; // HOOKS
 import Cookies from "js-cookie";
 import Offer from "./containers/Offer";
 import Home from "./containers/Home";
+import Signup from "./containers/Signup";
 import Login from "./containers/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path="/offer/:id">
             <Offer />
+          </Route>
+          <Route path="/signup">
+            <Signup />
           </Route>
           <Route path="/login">
             <Login setUser={setUser} />
