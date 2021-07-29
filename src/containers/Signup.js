@@ -3,12 +3,10 @@ import "./Login.css";
 
 const Signup = () => {
 
-
-
     return (
         <div>
         <div className="form-login">
-          <h2>S'inscrire</h2>
+          <h2>Se connecter</h2>
           <form action="">
             <input type="text" name="" id="" placeholder="Nom d'utilisateur" />
             <input type="email" placeholder="Email" />
