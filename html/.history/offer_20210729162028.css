@@ -1,0 +1,17 @@
+.container-fluid {
+    width: 100%;
+    display: flex;
+    background-color:pink;
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  
+  .left, .right {
+    width: 20vw;
+    background-color: orange;
+    height: 80%;
+  }
+  
+  
