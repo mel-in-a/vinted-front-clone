@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Login.css";
+import "./Login.scss";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -48,7 +48,8 @@ const Login = ({ setUser }) => {
             placeholder="Mot de passe"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Se connecter</button>
+          <div className="block">   <button type="submit">Se connecter</button></div>
+       
           <div className="login-link">
             {" "}
             <Link to="/signup">

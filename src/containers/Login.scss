@@ -9,6 +9,9 @@ body {
   margin: 30px auto;
   /* background-color: red; */
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-login h2 {
@@ -17,11 +20,12 @@ body {
 
 .form-login input {
   display: block;
-  margin: 10px auto 20px 0;
+  margin: 10px auto 20px auto;
   width: 100%;
   padding: 10px;
   border: none;
   border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .form-login input[type="checkbox"] {
@@ -58,12 +62,14 @@ body {
 
 .form-login button[type="submit"] {
   background-color: rgb(3, 182, 167);
-  width: 100%;
+  width: 300px;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+
+
 }
 
 .form-login .login-link a {
@@ -74,4 +80,9 @@ body {
   font-size: 0.8rem;
   color: rgb(3, 182, 167);
   text-align: center;
+}
+
+.block {
+  display: block;
+  width: 100%;
 }

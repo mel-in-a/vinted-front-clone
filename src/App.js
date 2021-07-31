@@ -1,5 +1,5 @@
-import "./App.css";
-import "./Margin-padding-bootstrap.css";
+import "./App.scss";
+import "./Margin-padding-bootstrap.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useState } from "react"; // HOOKS
 import Cookies from "js-cookie";

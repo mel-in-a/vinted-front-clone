@@ -1,7 +1,7 @@
-import "../components/Bigsearch.css";
+import "../components/Bigsearch.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import Bigsearch from "../components/Bigsearch";
 
