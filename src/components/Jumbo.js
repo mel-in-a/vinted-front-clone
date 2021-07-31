@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 const Jumbo = () => {
   return (
     <div className="jumbo-container">
-      <div className="jumbo-card-content">
+      <div className="jumbo-card-content hide-on-mobile">
         <div className="jumbo-card">
           <div className="jumbo-card-title">
             <h2>Prêts à faire du tri dans vos placards ?</h2>
