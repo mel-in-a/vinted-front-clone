@@ -6,7 +6,7 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  min-width: 600px;
+  /* min-width: 600px; */
   flex-wrap: 1;
   border-radius: 5px;
   color: white;
