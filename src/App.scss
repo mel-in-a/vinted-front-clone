@@ -168,24 +168,30 @@ body {
 /* popular gallery */
 .popular {
   margin: 20px;
+  height: auto;
+
+ 
 }
 .popular-gallery {
   display: flex;
-  flex-direction: row;
-  flex: 1;
-  width: 100%;
+  // flex-direction: row;
+  // flex: 1;
   gap: 10px;
-  overflow: hidden;
+  // background-color:red;
+  width: 100%;
+  flex-wrap: wrap;
+
 }
 
 .popular-gallery .card {
   display: flex;
   flex-direction: column;
-  min-width: 180px;
+  width: 200px;
   height: 350px;
   /* background-color: orange; */
   gap: 8px;
   padding: 9px;
+  flex-wrap: 1;
 }
 .popular-gallery .card .card-img {
   height: 290px;
