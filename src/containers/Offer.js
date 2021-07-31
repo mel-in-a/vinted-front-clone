@@ -29,7 +29,9 @@ const Offer = (props) => {
   }, [id]);
 
   return isLoading ? (
-    <p>Loadging ....</p>
+    <div class="loading-image">
+      <img src="/images/loader-infinity.gif" alt="" />
+    </div>
   ) : (
     <>
       <div className="offer">
@@ -51,9 +53,7 @@ const Offer = (props) => {
           </table>
           <hr />
           <div className="title">{data.product_name}</div>
-          <div className="description">
-           {data.product_description}
-          </div>
+          <div className="description">{data.product_description}</div>
           <div className="horizontal">
             <div className="avatar">B</div>
             <div className="username">{data.owner.account.username}</div>
