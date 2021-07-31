@@ -4,7 +4,7 @@ const Bigsearch = () => {
 
   return (
     <>
-      <div className="big-search hvr-glow mx-3">
+      <div className="big-search hvr-shadow-radial mx-3">
           <div className="icon ml-2 " ><FontAwesomeIcon icon="search"/> </div>
         <div>
         

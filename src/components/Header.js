@@ -10,9 +10,9 @@ const Header = ({ userToken, setUser }) => {
           </Link>
         </div>
 
-        <div className="search">
+        {/* <div className="search">
           <input type="search" name="" id="" className="br-5" />
-        </div>
+        </div> */}
 
         {userToken ? (
           <button
