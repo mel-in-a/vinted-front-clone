@@ -1,7 +1,9 @@
+import "../components/Bigsearch.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
+import Bigsearch from "../components/Bigsearch";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -26,14 +28,14 @@ const Home = () => {
   }, []);
 
   return isLoading ? (
-    <div>Loading...</div>
+    <div class="loading-image"><img src="/images/loader-infinity.gif" alt="" /></div>
   ) : (
     <>
   
   
     <div className="container">
-    
-      <div className="popular mt-4">
+    <Bigsearch />
+      <div className="popular">
         <h2>Articles populaires</h2>
         <div className="popular-gallery my-4">
           {data.offers.map((offer, index) => {
@@ -53,6 +55,7 @@ const Home = () => {
             );
           })}
         </div>
+
       </div>
     </div>
     </>

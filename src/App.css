@@ -6,7 +6,9 @@
   --color-green: rgb(3, 182, 167);
   --color-orange: rgb(255, 127, 0);
 }
-
+::selection {
+  background-color: var(--color-green);
+}
 /* global */
 h1 {
   font-size: 2rem;
@@ -42,6 +44,11 @@ h2 {
   border-bottom: 1px var(--color-light-grey) solid !important;
 }
 
+.loading-image {
+  margin: 50px auto;
+  width: 100px;
+
+}
 body {
   position: relative;
   min-height: 100vh;
@@ -72,8 +79,8 @@ body {
   border: none;
   padding: 5px;
   background-color: var(--color-light-grey);
-  margin-right: 20rem;
-  flex: 4;
+  margin-right: 20%;
+  /* flex: 4; */
 }
 
 .top-container button {
@@ -87,6 +94,7 @@ body {
   margin-left: 2rem;
   /* flex: 1; */
   flex-shrink: 0;
+  justify-content: flex-end;
 }
 
 .btn-reverse button {
@@ -114,6 +122,7 @@ body {
   display: flex;
   align-items: center;
   padding: 20px;
+  justify-content: space-around;
 }
 .jumbo-card-content {
   max-width: 1200px;
@@ -154,8 +163,15 @@ body {
   text-decoration: underline;
 }
 
-/* popular gallery */
 
+
+
+
+
+/* popular gallery */
+.popular {
+  margin-top: 30px;
+}
 .popular-gallery {
   display: flex;
   flex-direction: row;
