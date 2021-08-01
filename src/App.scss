@@ -12,6 +12,24 @@ $color-orange: rgb(255, 127, 0);
 ::selection {
   background-color: $color-green;
 }
+
+// alerts 
+
+.alert {
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+}
+
+.alert-danger {
+  color: red;
+  background-color: rgb(253, 212, 212);
+}
+
 /* global */
 h1 {
   font-size: 2rem;
@@ -200,7 +218,7 @@ body {
 .card-img img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
@@ -244,5 +262,15 @@ body {
   .jumbo-container {
     height: 130px;
     min-width: 110px;
+  }
+  .popular-gallery .card {
+    height: auto;
+    width: 100%;
+  }
+
+  .popular-gallery .card .card-img {
+    // height: auto;
+    flex:none;
+    height: 100%;
   }
 }

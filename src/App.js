@@ -10,6 +10,7 @@ import Login from "./containers/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Jumbo from "./components/Jumbo";
+import User from "./containers/User"
 
 
 // font awesome example
@@ -57,6 +58,9 @@ function App() {
           <Route path="/login">
             <Login setUser={setUser} />
           </Route>
+          <Route path="/user">
+            <User />
+            </Route>
         </Switch>
       </Router>
       <Footer />

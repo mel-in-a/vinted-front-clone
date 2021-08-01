@@ -36,7 +36,7 @@ const Header = ({ userToken, setUser }) => {
           )}
 
           <div className="sell-button hide-on-mobile">
-            <Link to="/signup">
+            <Link to="/user">
               <button>Vendre maintenant</button>
             </Link>
           </div>
@@ -50,8 +50,10 @@ const Header = ({ userToken, setUser }) => {
             color="white"
             hoverOpacity={0.8}
             scale={0.8}
-            marginTop="-7px"
+            marginTop="-5px"
           />
+        <div className=""></div>
+
         </div>
       </div>
     </div>

@@ -10,12 +10,21 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const token = Cookies.get("userToken");
+  const [priceMin, setPriceMin] = useState(0);
+  const [priceMax, setPriceMax] = useState("");
+  const [title, setTitle] = useState("");
+
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://lereacteur-vinted-api.herokuapp.com/offers"
+          // "https://lereacteur-vinted-api.herokuapp.com/offers?priceMax=pricemax"
+          `https://lereacteur-vinted-api.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}`
+        
+
+          // "https://maylina2021.herokuapp.com/offers"
         );
         // console.log(response.data);
         setData(response.data);
@@ -25,39 +34,46 @@ const Home = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [priceMin, priceMax, title]);
+
+
 
   return isLoading ? (
-    <div class="loading-image"><img src="/images/loader-infinity.gif" alt="" /></div>
+    <div className="loading-image">
+      <img src="/images/loader-infinity.gif" alt="" />
+    </div>
   ) : (
     <>
-  
-  
-    <div className="container">
-    <Bigsearch />
-      <div className="popular">
-        <h2>Articles populaires</h2>
-        <div className="popular-gallery my-4">
-          {data.offers.map((offer, index) => {
-            return (
-              
-              <div className="card" key={offer._id}>
-                    <Link to={`/offer/${offer._id}`}>
-                <div className="card-img">
-                  <img src={offer.product_image.secure_url} alt="" />
-                </div>
-                </Link>
-                <div className="card-price">{offer.product_price} €</div>
-                <div className="card-size">{offer.product_details.TAILLE}</div>
-                <div className="card-brand">Champion</div>
-              </div>
-           
-            );
-          })}
-        </div>
+      <div className="container">
+        <Bigsearch
+          setPriceMin={setPriceMin}
+          setPriceMax={setPriceMax}
+          setTitle={setTitle}
 
+ 
+        />
+        <div className="popular">
+          <h2>Articles populaires</h2>
+          <div className="popular-gallery my-4">
+            {data.offers.map((offer, index) => {
+              return (
+                <div className="card" key={offer._id}>
+                  <Link to={`/offer/${offer._id}`}>
+                    <div className="card-img">
+                      <img src={offer.product_image.secure_url} alt="" />
+                    </div>
+                  </Link>
+                  <div className="card-price">{offer.product_price} €</div>
+                  <div className="card-size">
+                    {offer.product_details.TAILLE}
+                  </div>
+                  <div className="card-brand">Champion</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 };

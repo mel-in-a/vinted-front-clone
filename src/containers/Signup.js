@@ -33,9 +33,9 @@ const Signup = ({ setUser }) => {
       // côté back : res.status(409).json({message: "This email already has an account."})
       console.log(error.response);
       console.log(error.message);
-      if (error.response.status === 409) {
-        setErrorMessage("Les identifiants ne sont pas correct !");
-      }
+      // if (error.response.status === 409) {
+      //   setErrorMessage("Les identifiants ne sont pas correct !");
+      // }
     }
   };
 

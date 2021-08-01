@@ -8,6 +8,7 @@ const Login = ({ setUser }) => {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,11 +24,14 @@ const Login = ({ setUser }) => {
       );
       if (response.data.token) {
         setUser(response.data.token);
-        history.push("/");
+        history.push("/user");
       }
       
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response);
+      if (error.response.status === 400) {
+        setErrorMessage("Les identifiants ne sont pas correct!");
+      }
     }
   };
 
@@ -48,7 +52,9 @@ const Login = ({ setUser }) => {
             placeholder="Mot de passe"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <div className="block">   <button type="submit">Se connecter</button></div>
+          {errorMessage && <div className="alert alert-danger">{errorMessage}</div> }
+          <div className="block">  
+           <button type="submit">Se connecter</button></div>
        
           <div className="login-link">
             {" "}
