@@ -214,11 +214,12 @@ body {
 .popular-gallery .card .card-img {
   height: 290px;
   /* background-color:red; */
+  flex:1 ;
 }
 .card-img img {
   width: 100%;
-  height: 100%;
-  background-size: contain;
+  // height: 100%;
+  background-size: cover;
   background-position: center center;
 }
 
@@ -245,6 +246,19 @@ body {
   .jumbo-container {
     height: 400px;
   }
+  .popular-gallery .card {
+    height: auto;
+    min-width: 290px;
+    flex: 1;
+  }
+  .popular-gallery .card .card-img {
+    // height: auto;
+    flex: 1;
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+  }
+  
   // .hide-on-mobile {
   //   display:none;
   //   visibility: hidden;
@@ -270,7 +284,8 @@ body {
 
   .popular-gallery .card .card-img {
     // height: auto;
-    flex:none;
+    flex: 1;
     height: 100%;
+    min-width: 320px;
   }
 }
