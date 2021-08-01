@@ -14,7 +14,7 @@ const Bigsearch = (props) => {
           <input
             type="search"
             className=" mx-3"
-            placeholder="produit recherché"
+            placeholder="Produit recherché ..."
             onChange={(e) => props.setTitle(e.target.value)}
           />
         </div>

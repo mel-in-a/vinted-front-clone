@@ -36,9 +36,16 @@ const Header = ({ userToken, setUser }) => {
           )}
 
           <div className="sell-button hide-on-mobile">
-            <Link to="/user">
+            {userToken ? (
+              <Link to="/user">
               <button>Vendre maintenant</button>
             </Link>
+            ) : (
+              <Link to="/login">
+              <button>Vendre maintenant</button>
+            </Link>
+            )}
+            
           </div>
     
 

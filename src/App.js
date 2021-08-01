@@ -59,7 +59,7 @@ function App() {
             <Login setUser={setUser} />
           </Route>
           <Route path="/user">
-            <User />
+            <User userToken={userToken}/>
             </Route>
         </Switch>
       </Router>
