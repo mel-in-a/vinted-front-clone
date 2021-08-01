@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 // import { Link, Redirect } from "react-router-dom";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 const Offer = (props) => {
   const { id } = useParams();
@@ -29,7 +29,7 @@ const Offer = (props) => {
   }, [id]);
 
   return isLoading ? (
-    <div class="loading-image">
+    <div className="loading-image">
       <img src="/images/loader-infinity.gif" alt="" />
     </div>
   ) : (
@@ -41,6 +41,7 @@ const Offer = (props) => {
         <div className="right">
           <div className="price">{data.product_price} €</div>
           <table>
+            <tbody> 
             {data.product_details.map((elem, index) => {
               const keys = Object.keys(elem);
               return (
@@ -50,6 +51,7 @@ const Offer = (props) => {
                 </tr>
               );
             })}
+            </tbody>
           </table>
           <hr />
           <div className="title">{data.product_name}</div>

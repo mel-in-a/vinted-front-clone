@@ -19,21 +19,21 @@ const Bigsearch = (props) => {
           />
         </div>
         <div className="bloc">
-          prix min :
+          Prix min :
           <input
             type="text"
             className="mx-2 "
-            placeholder="de"
+          
             onChange={(e) => props.setPriceMin(e.target.value)}
           />
           €
         </div>
         <div className="bloc">
-          prix max :
+          Prix max :
           <input
             type="text"
             className="mx-2"
-            placeholder="à"
+           
             onChange={(e) => props.setPriceMax(e.target.value)}
           />
           €
