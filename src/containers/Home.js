@@ -14,6 +14,10 @@ const Home = () => {
   const [priceMax, setPriceMax] = useState("");
   const [title, setTitle] = useState("");
 
+  const [limit, setLimit] = useState(10);
+  const [skip, setSkip] = useState(null);
+
+
 
 
   useEffect(() => {
@@ -21,7 +25,7 @@ const Home = () => {
       try {
         const response = await axios.get(
           // "https://lereacteur-vinted-api.herokuapp.com/offers?priceMax=pricemax"
-          `https://lereacteur-vinted-api.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}`
+          `https://lereacteur-vinted-api.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}&limit=${limit}&skip=${skip}`
         
 
           // "https://maylina2021.herokuapp.com/offers"
@@ -34,7 +38,7 @@ const Home = () => {
       }
     };
     fetchData();
-  }, [priceMin, priceMax, title]);
+  }, [priceMin, priceMax, title, limit, skip]);
 
 
 
@@ -54,7 +58,10 @@ const Home = () => {
         />
         <div className="popular">
           <h2>Articles populaires</h2>
+          {data.offers.length < 1 && "Oooops ! Pas de résultats trouvés !"}
+            <div>articles par recherche : {limit}</div>
           <div className="popular-gallery my-4">
+   
             {data.offers.map((offer, index) => {
               return (
                 <div className="card" key={offer._id}>

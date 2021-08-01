@@ -1,6 +1,6 @@
 // https://github.com/mattvox/react-css-burger
 
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Burger from "react-css-burger";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ const Header = ({ userToken, setUser }) => {
   return (
     <div className="header">
       <div className="top-container">
-        <div className="logo">
+        <div className="logo" onClick={<Redirect to='/'/>} >
           <Link to="/">
             <img src="/images/Vinted_logo.png" alt="" />
           </Link>
