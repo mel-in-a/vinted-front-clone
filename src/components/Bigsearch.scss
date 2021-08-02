@@ -24,8 +24,6 @@ $color-orange: rgb(255, 127, 0);
   border: 1px solid $color-green;
 }
 
-
-
 .big-search input[type="search"] {
   padding: 5px;
   border: 1px solid $color-green;
@@ -34,57 +32,47 @@ $color-orange: rgb(255, 127, 0);
   color: $color-green;
 }
 
-
 .big-search input[type="search"]:focus {
   outline: $color-green;
 }
 
-
 .big-search input[type="number"] {
-    padding: 5px;
-    border: 1px solid $color-green;
-    border-radius: 5px;
-    width: 80px;
-  }
-  
-  .big-search input[type="number"]:focus {
-    outline: white;
-  }
+  padding: 5px;
+  border: 1px solid $color-green;
+  border-radius: 5px;
+  width: 80px;
+}
 
+.big-search input[type="number"]:focus {
+  outline: white;
+}
 
 .big-search .search-button {
-    /* margin-left: 50%; */
-    padding: 5px 20px;
-    background: white;
-    border: 1px solid rgb(1, 158, 158);
-    border-radius: 5px;
-    color: rgb(3, 182, 167);
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    width: 210px;
-   
-    
+  /* margin-left: 50%; */
+  padding: 5px 20px;
+  background: white;
+  border: 1px solid rgb(1, 158, 158);
+  border-radius: 5px;
+  color: rgb(3, 182, 167);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 210px;
 }
 
 .big-search .bloc {
-    min-width: 210px;;
+  min-width: 210px;
 }
 
 @media (max-width: 980px) {
-.big-search {
+  .big-search {
     flex-direction: column;
     gap: 10px;
-}
+  }
 
-.big-search .icon {
+  .big-search .icon {
     display: none;
-}
-
-/* .popular {
-    margin-top: 120px;
-} */
-
+  }
 }
 
 @media (max-width: 480px) {

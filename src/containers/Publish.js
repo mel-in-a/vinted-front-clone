@@ -4,14 +4,14 @@ import { useState } from "react";
 
 // const Publish = isAuthenticated () => {
 
-const Publish = ({userToken}) => {
+const Publish = ({ userToken }) => {
   const [title, setTitle] = useState("");
   const [picture, setPicture] = useState();
   const [data, setData] = useState();
   const [description, setDescription] = useState();
   const [category, setCategory] = useState();
   const [brand, setBrand] = useState();
-  const [productStatus, setProductStatus] = useState();
+  const [condition, setCondition] = useState();
   const [price, setPrice] = useState();
 
   const handleSubmit = async (event) => {
@@ -26,12 +26,12 @@ const Publish = ({userToken}) => {
       formData.append("description", description);
       formData.append("category", category);
       formData.append("brand", brand);
-      formData.append("productStatus", productStatus);
+      formData.append("condition", condition);
       formData.append("price", price);
 
       // requête vers le serveur
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+        "https://maylina2021.herokuapp.com/offer/publish",
         formData,
         {
           headers: {
@@ -114,7 +114,7 @@ const Publish = ({userToken}) => {
                 id=""
                 onChange={(event) => setCategory(event.target.value)}
               >
-                <option value="" selected>
+                <option defaultValue>
                   Sélectionne une catégorie
                 </option>
                 <option value="veste">Veste</option>
@@ -134,7 +134,7 @@ const Publish = ({userToken}) => {
                 id=""
                 onChange={(event) => setBrand(event.target.value)}
               >
-                <option value="" selected>
+                <option defaultValue>
                   Sélectionne la marque
                 </option>
                 <option value="zara">Zara</option>
@@ -152,9 +152,9 @@ const Publish = ({userToken}) => {
               <select
                 name=""
                 id=""
-                onChange={(event) => setProductStatus(event.target.value)}
+                onChange={(event) => setCondition(event.target.value)}
               >
-                <option value="" selected>
+                <option defaultValue>
                   Indique l'était de ton article
                 </option>
                 <option value="">Neuf avec étiquettes</option>

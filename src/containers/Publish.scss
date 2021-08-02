@@ -10,6 +10,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    min-width: 340px;
   }
   
   .publish-container .card {
@@ -125,6 +126,10 @@ body {
       flex-direction: column;
     
     }
+
+    .publish-container {
+        padding: 10px;
+    } 
   
     .publish-container .card-horizontal .right, .card-horizontal .left {
         width: 100%;
