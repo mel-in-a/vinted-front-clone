@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // const Publish = isAuthenticated () => {
 
-const Publish = (userToken) => {
+const Publish = ({userToken}) => {
   const [title, setTitle] = useState("");
   const [picture, setPicture] = useState();
   const [data, setData] = useState();
@@ -31,7 +31,7 @@ const Publish = (userToken) => {
 
       // requête vers le serveur
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/publish/",
+        "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
         formData,
         {
           headers: {

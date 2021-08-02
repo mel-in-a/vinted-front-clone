@@ -23,7 +23,7 @@ const Home = () => {
       try {
         const response = await axios.get(
           // "https://lereacteur-vinted-api.herokuapp.com/offers?priceMax=pricemax"
-          `https://lereacteur-vinted-api.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}&limit=${limit}&skip=${skip}`
+          `https://maylina2021.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}&limit=${limit}&skip=${skip}`
 
           // "https://maylina2021.herokuapp.com/offers"
         );

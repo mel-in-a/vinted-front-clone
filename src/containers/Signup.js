@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./Login.scss";
 
+
 const Signup = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ const Signup = ({ setUser }) => {
       e.preventDefault();
 
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        "https://maylina2021.herokuapp.com/user/signup",
         {
           email: email,
           username: username,
