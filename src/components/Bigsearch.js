@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 const Bigsearch = (props) => {
-// console.log("props : " +props);
+  // console.log("props : " +props);
   return (
     <>
       <form className="big-search hvr-shadow-radial mx-3">
@@ -10,7 +9,6 @@ const Bigsearch = (props) => {
           <FontAwesomeIcon icon="search" />{" "}
         </div>
         <div>
-
           <input
             type="search"
             className=" mx-3"
@@ -26,7 +24,7 @@ const Bigsearch = (props) => {
             min="0"
             onChange={(e) => props.setPriceMin(e.target.value)}
           />
-          €
+          {props.priceMin} €
         </div>
         <div className="bloc">
           Prix max :
