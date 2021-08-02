@@ -18,6 +18,9 @@ const Home = () => {
   const [skip, setSkip] = useState(null);
   const [activeLink, setActiveLink] = useState("");
 
+
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -80,6 +83,17 @@ const Home = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="pagination">
+            <div className="left-arrow"> &#x1F818; </div>
+            <div className="page">1</div>
+            <div className="page">2</div>
+            <div className="page">3</div>
+            <div className="page">4</div>
+            <div className="right-arrow"> 	
+            	
+            &#x1F81A;</div>
+            {/* {data.offers.length > limit &&  */}
           </div>
           <div className="per-page-indicator">
             Articles par page : <b>{limit}</b>

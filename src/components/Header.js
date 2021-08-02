@@ -62,7 +62,7 @@ const Header = ({ userToken, setUser }) => {
           />
         <div  className={state.active === true ? "mobile-menu-absolute hrv-shadow" : "mobile-menu-absolute hidden" }>
        
-          <ul>
+          <ul onClick={() => setState({active : false})}>
          
             <li><Link to="/publish">Déposer une annonce</Link></li>
             {userToken ? <li onClick={() => setUser(null)}>Se deconnecter</li> : 

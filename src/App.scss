@@ -318,7 +318,7 @@ body {
   width: 100vw;
   color: white;
   background-color: $color-green;
-  padding: 20px;
+  padding: 0 20px;
   z-index: 10000;
 }
 
@@ -338,6 +338,38 @@ color: white;
 text-decoration: none;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  gap: 10px;
+  // background: rgb(104, 83, 83);
+}
+
+.pagination .left-arrow, .pagination .right-arrow {
+  background-color: $color-green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  // font-size: 1.3rem;
+  cursor: pointer;
+  margin: 0 40px
+
+}
+
+.pagination .page {
+  background-color: $color-green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  min-width:20px;
+  cursor: pointer;
+  text-align: center;
+
+}
 
 @media (max-width: 480px) {
   .mobile-menu {
