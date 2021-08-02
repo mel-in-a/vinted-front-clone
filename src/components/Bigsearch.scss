@@ -40,14 +40,14 @@ $color-orange: rgb(255, 127, 0);
 }
 
 
-.big-search input[type="text"] {
+.big-search input[type="number"] {
     padding: 5px;
     border: 1px solid $color-green;
     border-radius: 5px;
     width: 80px;
   }
   
-  .big-search input[type="text"]:focus {
+  .big-search input[type="number"]:focus {
     outline: white;
   }
 

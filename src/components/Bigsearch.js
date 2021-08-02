@@ -21,9 +21,9 @@ const Bigsearch = (props) => {
         <div className="bloc">
           Prix min :
           <input
-            type="text"
+            type="number"
             className="mx-2 "
-          
+            min="0"
             onChange={(e) => props.setPriceMin(e.target.value)}
           />
           €
@@ -31,7 +31,7 @@ const Bigsearch = (props) => {
         <div className="bloc">
           Prix max :
           <input
-            type="text"
+            type="number"
             className="mx-2"
            
             onChange={(e) => props.setPriceMax(e.target.value)}
