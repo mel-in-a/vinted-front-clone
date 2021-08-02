@@ -13,6 +13,7 @@ const Publish = ({ userToken }) => {
   const [brand, setBrand] = useState();
   const [condition, setCondition] = useState();
   const [price, setPrice] = useState();
+  const [added, setAdded] = useState();
 
   const handleSubmit = async (event) => {
     try {
@@ -41,6 +42,7 @@ const Publish = ({ userToken }) => {
       );
       console.log(response.data);
       setData(response.data.result);
+      setAdded(true);
     } catch (error) {
       console.log(error.response);
       console.log(error.message);
@@ -182,7 +184,7 @@ const Publish = ({ userToken }) => {
               />
             </div>
           </div>
-
+                
           <div className="card-horizontal">
             <div className="left"></div>
             <div className="right">
@@ -199,6 +201,10 @@ const Publish = ({ userToken }) => {
           L. 132-2 du Code de la Consommation.{" "}
         </small>
 
+
+       
+
+        {added && <div className="alert alert-info">Le produit est bien ajouté !</div> }
         <div className="bottom-buttons">
           <button className="button btn-reverse">
             Sauvegarder le brouillon

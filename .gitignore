@@ -25,3 +25,4 @@ yarn-error.log*
 # historique
 /.history
 /html
+/_sources_no_upload

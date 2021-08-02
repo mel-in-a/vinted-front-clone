@@ -9,11 +9,7 @@ const Offer = (props) => {
   const { id } = useParams();
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-
   //   const token = Cookies.get("userToken");
-
-  
-
   useEffect(() => {
     const fetchData = async () => {
       try {

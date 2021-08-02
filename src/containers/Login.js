@@ -29,7 +29,7 @@ const Login = ({ setUser }) => {
       
     } catch (error) {
       console.log(error.response);
-      if (error.response.status === 400) {
+      if (error.response.status === 401) {
         setErrorMessage("Les identifiants ne sont pas correct!");
       }
     }

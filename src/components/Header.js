@@ -58,15 +58,19 @@ const Header = ({ userToken, setUser }) => {
             hoverOpacity={0.8}
             scale={0.8}
             marginTop="-5px"
+            transitionDuration="0.3s"
           />
-        {/* <div className="mobile-menu-absolute">
+        <div  className={state.active === true ? "mobile-menu-absolute hrv-shadow" : "mobile-menu-absolute hidden" }>
+       
           <ul>
-            <li>Mon compte</li>
-            <li>Mes annonces</li>
-            <li>Se connecter</li>
-            <li>Se deconnecter</li>
+         
+            <li><Link to="/publish">Déposer une annonce</Link></li>
+            {userToken ? <li onClick={() => setUser(null)}>Se deconnecter</li> : 
+            <li>  <Link to="/login">Se connecter </Link></li>
+}
+           
           </ul>
-        </div> */}
+        </div>
 
         </div>
       </div>

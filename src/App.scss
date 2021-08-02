@@ -308,15 +308,17 @@ body {
 }
 
 .mobile-menu {
-  position: relative;
+  // position: relative;
 }
 
 .mobile-menu-absolute {
   position: absolute;
-  top: 47px;
+  top: 60px;
+  left :-14px;
   width: 100vw;
-  background-color: white;
-  padding: 10px;
+  color: white;
+  background-color: $color-green;
+  padding: 20px;
   z-index: 10000;
 }
 
@@ -326,9 +328,16 @@ body {
 
 .mobile-menu-absolute li {
   height: 20px;
-  border-bottom: 1px solid $color-green;
+  border-bottom: 1px solid white;
   padding: 10px;
+  cursor: pointer;
 }
+
+.mobile-menu-absolute a {
+color: white;
+text-decoration: none;
+}
+
 
 @media (max-width: 480px) {
   .mobile-menu {
