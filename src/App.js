@@ -62,7 +62,7 @@ function App() {
             <User userToken={userToken} />
           </Route>
           <Route path="/publish">
-            <Publish />
+            <Publish userToken={userToken} />
           </Route>
 
         </Switch>

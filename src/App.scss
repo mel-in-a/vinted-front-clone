@@ -225,12 +225,14 @@ body {
   height: 290px;
   /* background-color:red; */
   flex: 1;
+
 }
 .card-img img {
   width: 100%;
   // height: 100%;
   background-size: cover;
   background-position: center center;
+  border-radius: 5px;
 }
 
 // paginations

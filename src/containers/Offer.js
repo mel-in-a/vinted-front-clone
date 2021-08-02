@@ -12,6 +12,8 @@ const Offer = (props) => {
 
   //   const token = Cookies.get("userToken");
 
+  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
