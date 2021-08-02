@@ -44,6 +44,7 @@ const Login = ({ setUser }) => {
             type="email"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <input
             type="password"
@@ -51,6 +52,7 @@ const Login = ({ setUser }) => {
             id=""
             placeholder="Mot de passe"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           {errorMessage && <div className="alert alert-danger">{errorMessage}</div> }
           <div className="block">  
