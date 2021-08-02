@@ -16,8 +16,8 @@ $color-orange: rgb(255, 127, 0);
   flex-wrap: 1;
   border-radius: 5px;
   color: white;
-  position: sticky;
-  top: 0px;
+  // position: sticky;
+  // top: 0px;
   justify-content: space-evenly;
   margin-top: -35px;
   min-width: 310px;
@@ -64,7 +64,7 @@ $color-orange: rgb(255, 127, 0);
   min-width: 210px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 720px) {
   .big-search {
     flex-direction: column;
     gap: 10px;

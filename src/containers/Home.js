@@ -18,9 +18,6 @@ const Home = () => {
   const [skip, setSkip] = useState(null);
   const [activeLink, setActiveLink] = useState("");
 
-
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -90,9 +87,7 @@ const Home = () => {
             <div className="page">2</div>
             <div className="page">3</div>
             <div className="page">4</div>
-            <div className="right-arrow"> 	
-            	
-            &#x1F81A;</div>
+            <div className="right-arrow">&#x1F81A;</div>
             {/* {data.offers.length > limit &&  */}
           </div>
           <div className="per-page-indicator">

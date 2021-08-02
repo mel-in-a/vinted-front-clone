@@ -19,6 +19,7 @@ const Offer = (props) => {
         // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
+        window.scrollTo(0, 0);
       } catch (error) {
         console.log(error.message);
       }

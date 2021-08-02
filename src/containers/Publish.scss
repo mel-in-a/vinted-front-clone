@@ -3,133 +3,132 @@ $color-green: rgb(3, 182, 167);
 $color-orange: rgb(255, 127, 0); */
 
 body {
-    background-color: rgb(236, 236, 236);
-  }
-  
-  .publish-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    min-width: 340px;
-  }
-  
-  .publish-container .card {
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid rgb(3, 182, 167);
-    border-radius: 5px;
-  }
-  
-  .publish-container .card-horizontal {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: 1; */
-    /* gap: 10px; */
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .publish-container .card-horizontal .left {
-    /* background-color: aqua; */
-    /* flex: 2 1 auto; */
-    width: 50%;
-  }
-  
-  .publish-container .card-horizontal .right {
-    /* flex: 2 1 auto; */
-    width: 50%;
-  }
-  
-  .publish-container .card input, textarea{
-    /* display: block; */
-    margin: 10px auto 20px auto;
-    width: 100%;
-  padding: 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  .publish-container .card input:focus, .card textarea:focus {
-    border-bottom: 1px solid rgb(3, 182, 167);
-    outline: none;
-    transition: 0.3s;
-  }
-  
-  .publish-container .dotted-block {
-    border: 1px dotted rgb(146, 146, 146);
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(3, 182, 167);
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-  
-  .publish-container .dotted-block .upload-button input {
-    display: block;
-    border: 1px solid rgb(3, 182, 167);
-    border-radius: 5px;
-    padding: 10px;
-    color: rgb(3, 182, 167);
-    /* font-size: 20px; */
-  }
-  
-  .publish-container .right select {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      line-height: 30px;
-      /* font-size: 1.3rem; */
-  }
-  
-  .publish-container .right select:focus, .right select:hover {
-      border: none;
-      outline: none;
-  
-  }
-  
-  .publish-container small {
-      font-size: 0.8rem;
-  }
-  
-  .bottom-buttons {
-      display: flex;
-      justify-content: flex-end;
-      margin: 40px 0;
-  }
-  
-  .publish-container .bottom-buttons button {
-      margin: 10px;
-      padding: 10px;
-      border: none;
-      outline: none;
-      background-color: rgb(3, 182, 167);
-      color: white;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  
-  .publish-container .bottom-buttons .btn-reverse {
-      background-color: white;
-      color:  rgb(3, 182, 167);
-      border: 1px solid rgb(3, 182, 167);
-  }
-  
-  
-  @media (max-width: 720px) {
-      .publish-container .card-horizontal {
-      flex-direction: column;
-    
-    }
+  background-color: rgb(236, 236, 236);
+}
 
-  
-    .publish-container .card-horizontal .right, .card-horizontal .left {
-        width: 100%;
-    }
+.publish-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-width: 320px;
+}
+
+.publish-container .card {
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid rgb(3, 182, 167);
+  border-radius: 5px;
+}
+
+.publish-container .card-horizontal {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: 1; */
+  /* gap: 10px; */
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.publish-container .card-horizontal .left {
+  /* background-color: aqua; */
+  /* flex: 2 1 auto; */
+  width: 50%;
+}
+
+.publish-container .card-horizontal .right {
+  /* flex: 2 1 auto; */
+  width: 50%;
+}
+
+.publish-container .card input,
+textarea {
+  /* display: block; */
+  margin: 10px auto 20px auto;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.publish-container .card input:focus,
+.card textarea:focus {
+  border-bottom: 1px solid rgb(3, 182, 167);
+  outline: none;
+  transition: 0.3s;
+}
+
+.publish-container .dotted-block {
+  border: 1px dotted rgb(146, 146, 146);
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(3, 182, 167);
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.publish-container .dotted-block .upload-button input {
+  display: block;
+  border: 1px solid rgb(3, 182, 167);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(3, 182, 167);
+  /* font-size: 20px; */
+}
+
+.publish-container .right select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  line-height: 30px;
+  /* font-size: 1.3rem; */
+}
+
+.publish-container .right select:focus,
+.right select:hover {
+  border: none;
+  outline: none;
+}
+
+.publish-container small {
+  font-size: 0.8rem;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 0;
+}
+
+.publish-container .bottom-buttons button {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(3, 182, 167);
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.publish-container .bottom-buttons .btn-reverse {
+  background-color: white;
+  color: rgb(3, 182, 167);
+  border: 1px solid rgb(3, 182, 167);
+}
+
+@media (max-width: 720px) {
+  .publish-container .card-horizontal {
+    flex-direction: column;
   }
-  
+
+  .publish-container .card-horizontal .right,
+  .card-horizontal .left {
+    width: 100%;
+  }
+}
