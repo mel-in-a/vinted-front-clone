@@ -18,12 +18,14 @@ const Home = () => {
   const [skip, setSkip] = useState(null);
   const [activeLink, setActiveLink] = useState("");
 
+  const [sort, setSort] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
           // "https://lereacteur-vinted-api.herokuapp.com/offers?priceMax=pricemax"
-          `https://maylina2021.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}&limit=${limit}&skip=${skip}`
+          `https://maylina2021.herokuapp.com/offers?title=${title}&priceMin=${priceMin}&priceMax=${priceMax}&limit=${limit}&skip=${skip}&sort=${sort}`
 
           // "https://maylina2021.herokuapp.com/offers"
         );
@@ -35,7 +37,7 @@ const Home = () => {
       }
     };
     fetchData();
-  }, [priceMin, priceMax, title, limit, skip]);
+  }, [priceMin, priceMax, title, limit, skip, sort]);
 
   return isLoading ? (
     <div className="loading-image">
@@ -51,18 +53,28 @@ const Home = () => {
         />
         <div className="popular">
           <h2>Articles populaires</h2>
-          {data.offers.length < 1 && (
+   
+        
+
+          {data.offers.length < 1 ? (
             <div className="alert alert-warning">
               Oooops ! Pas de résultat trouvé !
             </div>
-          )}
+          ) :  (<div className="small mt-4"> {data.offers.length} produit(s) affiché(s) </div>)}
+
+
           <div className="per-page-indicator">
-            Articles par page : <b>{limit}</b>{" "}
+            <div className="">     Articles par page : <b>{limit}</b>{" "}
             <span onClick={() => setLimit(5)}>5</span>
             <span onClick={() => setLimit(10)}>10</span>
             <span onClick={() => setLimit(15)}>15</span>
-            <span onClick={() => setLimit("Tout")}>Tout</span>
+            <span onClick={() => setLimit("Tout")}>Tout</span></div>
+            <div className="">    <div className="sort" onClick={() => setSort("price-asc")}>&#8595;</div>
+          <div className="sort" onClick={() => setSort("price-desc")}>&#8593;</div></div>
+        
           </div>
+
+
           <div className="popular-gallery my-4">
             {data.offers.map((offer, index) => {
               return (
