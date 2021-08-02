@@ -1,4 +1,7 @@
 import "./Publish.scss";
+
+// const Publish = isAuthenticated () => {
+
 const Publish = () => {
     return (
         <div className="publish-container">

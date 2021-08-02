@@ -33,7 +33,7 @@ const Bigsearch = (props) => {
           <input
             type="number"
             className="mx-2"
-           
+            min={"1"}
             onChange={(e) => props.setPriceMax(e.target.value)}
           />
           €

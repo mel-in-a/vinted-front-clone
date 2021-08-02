@@ -41,16 +41,16 @@ const Offer = (props) => {
         <div className="right">
           <div className="price">{data.product_price} €</div>
           <table>
-            <tbody> 
-            {data.product_details.map((elem, index) => {
-              const keys = Object.keys(elem);
-              return (
-                <tr key={index}>
-                  <td>{keys[0]}</td>
-                  <td className="bold">{elem[keys[0]]}</td>
-                </tr>
-              );
-            })}
+            <tbody>
+              {data.product_details.map((elem, index) => {
+                const keys = Object.keys(elem);
+                return (
+                  <tr key={index}>
+                    <td>{keys[0]}</td>
+                    <td className="bold">{elem[keys[0]]}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
           <hr />
