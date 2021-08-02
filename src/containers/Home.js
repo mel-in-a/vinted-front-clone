@@ -69,12 +69,15 @@ const Home = () => {
             <span onClick={() => setLimit(10)}>10</span>
             <span onClick={() => setLimit(15)}>15</span>
             <span onClick={() => setLimit("Tout")}>Tout</span></div>
-            <div className="">    <div className="sort" onClick={() => setSort("price-asc")}>&#8595;</div>
-          <div className="sort" onClick={() => setSort("price-desc")}>&#8593;</div></div>
+    
         
           </div>
 
-
+            <div className="sort-group">
+              Tri : 
+             <div className="sort" onClick={() => setSort("price-asc")}>&#8595;</div>
+          <div className="sort" onClick={() => setSort("price-desc")}>&#8593;</div>
+            </div>
           <div className="popular-gallery my-4">
             {data.offers.map((offer, index) => {
               return (
@@ -97,14 +100,13 @@ const Home = () => {
             <div className="left-arrow"> &#x1F818; </div>
             <div className="page">1</div>
             <div className="page">2</div>
-            <div className="page">3</div>
-            <div className="page">4</div>
+         
             <div className="right-arrow">&#x1F81A;</div>
             {/* {data.offers.length > limit &&  */}
           </div>
-          <div className="per-page-indicator">
+          {/* <div className="per-page-indicator">
             Articles par page : <b>{limit}</b>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
