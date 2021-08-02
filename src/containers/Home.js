@@ -52,16 +52,16 @@ const Home = () => {
         <div className="popular">
           <h2>Articles populaires</h2>
           {data.offers.length < 1 && (
-            <div className="alert alert-info">
+            <div className="alert alert-warning">
               Oooops ! Pas de résultat trouvé !
             </div>
           )}
           <div className="per-page-indicator">
-            Articles par page : <span onClick={() => setLimit(5)}>5</span>
+            Articles par page : <b>{limit}</b>{" "}
+            <span onClick={() => setLimit(5)}>5</span>
             <span onClick={() => setLimit(10)}>10</span>
             <span onClick={() => setLimit(15)}>15</span>
             <span onClick={() => setLimit("Tout")}>Tout</span>
-             <b>{limit}</b>
           </div>
           <div className="popular-gallery my-4">
             {data.offers.map((offer, index) => {
