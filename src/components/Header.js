@@ -37,7 +37,7 @@ const Header = ({ userToken, setUser }) => {
 
           <div className="sell-button hide-on-mobile">
             {userToken ? (
-              <Link to="/user">
+              <Link to="/publish">
               <button>Vendre maintenant</button>
             </Link>
             ) : (

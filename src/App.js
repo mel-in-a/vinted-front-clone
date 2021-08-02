@@ -10,8 +10,8 @@ import Login from "./containers/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Jumbo from "./components/Jumbo";
-import User from "./containers/User"
-
+import User from "./containers/User";
+import Publish from "./containers/Publish";
 
 // font awesome example
 // link : https://apollo.lereacteur.io/course/5f3e73f7ac3b9c0017f4e8d6/60c87cc1b8f3860017db4a3f
@@ -59,8 +59,12 @@ function App() {
             <Login setUser={setUser} />
           </Route>
           <Route path="/user">
-            <User userToken={userToken}/>
-            </Route>
+            <User userToken={userToken} />
+          </Route>
+          <Route path="/publish">
+            <Publish />
+          </Route>
+
         </Switch>
       </Router>
       <Footer />

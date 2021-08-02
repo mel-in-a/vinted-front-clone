@@ -24,7 +24,7 @@ const Login = ({ setUser }) => {
       );
       if (response.data.token) {
         setUser(response.data.token);
-        history.push("/user");
+        history.push("/publish");
       }
       
     } catch (error) {

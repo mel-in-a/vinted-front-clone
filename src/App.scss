@@ -6,7 +6,7 @@ $color-light-grey: rgb(236, 236, 236);
 $color-green: rgb(3, 182, 167);
 $color-orange: rgb(255, 127, 0);
 body {
-  color:rgb(66, 66, 66)
+  color: rgb(66, 66, 66);
 }
 
 .hidden {
@@ -17,7 +17,7 @@ body {
   background-color: $color-green;
 }
 
-// alerts 
+// alerts
 
 .alert {
   padding: 10px;
@@ -26,7 +26,6 @@ body {
   border-radius: 4px;
   font-size: 0.9rem;
   font-weight: 600;
-
 }
 
 .alert-danger {
@@ -41,7 +40,7 @@ body {
 
 .alert-warning {
   color: white;
-  background-color: rgb(255, 102, 0);;
+  background-color: rgb(255, 102, 0);
 }
 
 /* global */
@@ -201,8 +200,6 @@ body {
 .popular {
   margin: 20px;
   height: auto;
-
- 
 }
 .popular-gallery {
   display: flex;
@@ -212,7 +209,6 @@ body {
   // background-color:red;
   width: 100%;
   flex-wrap: wrap;
-
 }
 
 .popular-gallery .card {
@@ -228,13 +224,43 @@ body {
 .popular-gallery .card .card-img {
   height: 290px;
   /* background-color:red; */
-  flex:1 ;
+  flex: 1;
 }
 .card-img img {
   width: 100%;
   // height: 100%;
   background-size: cover;
   background-position: center center;
+}
+
+// paginations
+
+.per-page-indicator {
+  margin: 20px 0;
+  min-width: 300px;
+}
+
+.per-page-indicator span {
+  padding: 10px;
+  background-color: $color-green;
+  color: white;
+  margin: 0 5px;
+  border-radius: 5px;
+  min-width: 18px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.per-page-indicator b {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  min-width: 18px;
+  display: inline-block;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -272,52 +298,15 @@ body {
     background-size: contain;
     background-position: center center;
   }
-  
+
   // .hide-on-mobile {
   //   display:none;
   //   visibility: hidden;
   // }
 }
 
-// paginations 
-
-.per-page-indicator {
-  margin: 20px 0;
-  min-width: 300px;
-}
-
-.per-page-indicator span {
-  padding: 10px;
-  background-color: $color-green;
-  color: white;
-  margin: 0 5px;
-  border-radius: 5px;
-  min-width: 18px;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center
-
-
-
-
-}
-
-.per-page-indicator b {
-
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  transition: 0.3s;
-  min-width: 18px;
-  display: inline-block;
-  text-align: center
-}
-
-.mobile-menu { 
+.mobile-menu {
   position: relative;
- 
-
 }
 
 .mobile-menu-absolute {
@@ -327,7 +316,6 @@ body {
   background-color: white;
   padding: 10px;
   z-index: 10000;
-
 }
 
 .mobile-menu-absolute ul {
@@ -340,13 +328,12 @@ body {
   padding: 10px;
 }
 
-
 @media (max-width: 480px) {
   .mobile-menu {
     display: block;
   }
   .hide-on-mobile {
-    display:none;
+    display: none;
     visibility: hidden;
   }
   .jumbo-container {
