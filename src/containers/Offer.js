@@ -2,7 +2,7 @@ import "./Offer.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import Cookies from "js-cookie";
 
 const Offer = (props) => {
@@ -60,7 +60,7 @@ const Offer = (props) => {
             <div className="username">{data.owner.account.username}</div>
           </div>
 
-          <button className="btn-buy">Acheter</button>
+          <button className="btn-buy"><Link to="/cart">Acheter</Link></button>
         </div>
       </div>
     </>

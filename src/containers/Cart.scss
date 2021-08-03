@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(236, 236, 236);
+  }
+  
+  .cart-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 320px;
+  }
+  
+  .cart-container .card {
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(3, 182, 167);
+    border-radius: 5px;
+  }
+  
+  .cart-container .card-horizontal {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: 1; */
+    /* gap: 10px; */
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .cart-container .card-horizontal .left {
+    /* background-color: aqua; */
+    /* flex: 2 1 auto; */
+    width: 50%;
+  }
+  
+  .cart-container .card-horizontal .right {
+    /* flex: 2 1 auto; */
+    width: 50%;
+  }
+  
+  .cart-container .card input,
+  textarea {
+    /* display: block; */
+    margin: 10px auto 20px auto;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .cart-container .card input:focus,
+  .card textarea:focus {
+    border-bottom: 1px solid rgb(3, 182, 167);
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .cart-container .right {
+    text-align: right;
+  }
+  
+  .cart-container hr {
+    margin: 60px 0;
+  }
+  
+  .pay-button {
+    /* margin: 10px; */
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(12, 173, 93);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  
+  .cart-container p {
+      padding: 20px 0;
+      line-height: 1.5;
+  
+  }

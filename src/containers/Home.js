@@ -17,7 +17,7 @@ const Home = () => {
   const [limit, setLimit] = useState(10);
   const [skip, setSkip] = useState(null);
   const [activeLink, setActiveLink] = useState("");
-
+  const perpage = skip * limit;
   const [sort, setSort] = useState("");
 
   useEffect(() => {
