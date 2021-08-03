@@ -50,7 +50,7 @@ function App() {
             <Jumbo />
             <Home />
           </Route>
-          <Route path="/offer/:id">
+          <Route path="/offer/:id" userToken={userToken}>
             <Offer />
           </Route>
           <Route path="/signup">

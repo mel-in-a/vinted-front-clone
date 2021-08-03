@@ -3,13 +3,16 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import Cookies from "js-cookie";
+import { useHistory } from "react-router-dom";
+import Cookies from "js-cookie";
+
 
 const Offer = (props) => {
+  const history = useHistory();
   const { id } = useParams();
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  //   const token = Cookies.get("userToken");
+  const token = Cookies.get("userToken");
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -60,7 +63,7 @@ const Offer = (props) => {
             <div className="username">{data.owner.account.username}</div>
           </div>
 
-          <button className="btn-buy"><Link to="/cart">Acheter</Link></button>
+          <button className="btn-buy" onClick={() =>history.push("/cart", {title: data.title, token: token, price: data.product_price})}>Acheter</button>
         </div>
       </div>
     </>
