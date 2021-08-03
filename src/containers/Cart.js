@@ -2,12 +2,13 @@ import "./Cart.scss";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Checkoutform from "../components/Checkoutform";
+const stripePromise = loadStripe("pk_test_wiKmQhimVLDgtX1USd4bOrkp00T9j2SleZ"); // clé ok !
 
-const Cart = (title, token, price) => {
-  const stripePromise = loadStripe("pk_test_5z9rSB8XwuAOihoBixCMfL6X"); // clé ok !
+const Cart = ({userId, title, token, price}) => {
+
   return (
     <Elements stripe={stripePromise}>
-      <Checkoutform />
+      <Checkoutform userId={userId} title={title} token={token} price={price}/>
     </Elements>
   );
 };

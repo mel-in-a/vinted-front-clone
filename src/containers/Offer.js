@@ -2,10 +2,9 @@ import "./Offer.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
-
 
 const Offer = (props) => {
   const history = useHistory();
@@ -63,7 +62,19 @@ const Offer = (props) => {
             <div className="username">{data.owner.account.username}</div>
           </div>
 
-          <button className="btn-buy" onClick={() =>history.push("/cart", {title: data.title, token: token, price: data.product_price})}>Acheter</button>
+          <button
+            className="btn-buy"
+            onClick={() =>
+              history.push("/cart", {
+                userId: data.owner._id,
+                title: data.title,
+                token: token,
+                price: data.product_price,
+              })
+            }
+          >
+            Acheter
+          </button>
         </div>
       </div>
     </>

@@ -40,7 +40,7 @@ const Publish = ({ userToken }) => {
           },
         }
       );
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data.result);
       setAdded(true);
     } catch (error) {
