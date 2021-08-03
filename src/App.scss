@@ -247,10 +247,12 @@ body {
   min-width: 300px;
   display: flex;
   justify-content: space-between;
+  font-size: 0.9rem;
+  cursor: not-allowed;
 }
 
 .per-page-indicator span {
-  padding: 10px;
+  padding: 5px;
   background-color: $color-green;
   color: white;
   margin: 0 5px;
@@ -264,7 +266,7 @@ body {
 .per-page-indicator b {
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   transition: 0.3s;
   min-width: 18px;
@@ -292,7 +294,7 @@ body {
 }
 
 .sort {
-  padding: 10px;
+  padding: 5px;
   background-color: $color-green;
   color: white;
   margin: 0 5px;
@@ -369,6 +371,7 @@ text-decoration: none;
   height: 60px;
   align-items: center;
   gap: 10px;
+  cursor: not-allowed;
   // background: rgb(104, 83, 83);
 }
 
@@ -378,7 +381,7 @@ text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   // font-size: 1.3rem;
-  cursor: pointer;
+  // cursor: pointer;
   margin: 0 40px
 
 }
@@ -389,7 +392,7 @@ text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   min-width:20px;
-  cursor: pointer;
+  cursor: not-allowed;
   text-align: center;
 
 }

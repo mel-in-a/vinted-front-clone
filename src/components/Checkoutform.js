@@ -89,7 +89,7 @@ const Checkoutform = ({ userId, title, price, token }) => {
           </p>
 
           {!completed ? (
-            <button type="submit pay-button">Pay</button>
+            <button type="submit" className="pay-button">Pay</button>
           ) : (
             "Paiement effectué"
           )}
