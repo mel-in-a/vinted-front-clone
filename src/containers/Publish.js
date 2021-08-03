@@ -9,10 +9,14 @@ const Publish = ({ userToken }) => {
   const [picture, setPicture] = useState();
   const [data, setData] = useState();
   const [description, setDescription] = useState();
-  const [category, setCategory] = useState();
+
   const [brand, setBrand] = useState();
   const [condition, setCondition] = useState();
   const [price, setPrice] = useState();
+  const [size, setSize] = useState();
+  const [city, setCity] = useState();
+  const [color, setColor] = useState();
+  
   const [added, setAdded] = useState();
 
   const handleSubmit = async (event) => {
@@ -25,10 +29,12 @@ const Publish = ({ userToken }) => {
       formData.append("title", title);
       formData.append("picture", picture);
       formData.append("description", description);
-      formData.append("category", category);
       formData.append("brand", brand);
       formData.append("condition", condition);
       formData.append("price", price);
+      formData.append("size", size);
+      formData.append("city", city);
+      formData.append("color", color);
 
       // requête vers le serveur
       const response = await axios.post(
@@ -108,20 +114,20 @@ const Publish = ({ userToken }) => {
         <div className="card">
           <div className="card-horizontal">
             <div className="left">
-              <b>Catégorie</b>
+              <b>Taille</b>
             </div>
             <div className="right">
               <select
                 name=""
                 id=""
-                onChange={(event) => setCategory(event.target.value)}
+                onChange={(event) => setSize(event.target.value)}
               >
                 <option defaultValue>
-                  Sélectionne une catégorie
+                  Sélectionnez une taille
                 </option>
-                <option value="veste">Veste</option>
-                <option value="pantalon">Pantalon</option>
-                <option value="chaussures">Chaussures</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
               </select>
             </div>
           </div>
@@ -137,11 +143,13 @@ const Publish = ({ userToken }) => {
                 onChange={(event) => setBrand(event.target.value)}
               >
                 <option defaultValue>
-                  Sélectionne la marque
+                  Sélectionnez la marque
                 </option>
-                <option value="zara">Zara</option>
-                <option value="vuiton">Louis Vuiton</option>
-                <option value="prada">Prada</option>
+                <option value="Zara">Zara</option>
+                <option value="Vuiton">Louis Vuiton</option>
+                <option value="Prada">Prada</option>
+                <option value="Gemo">Gémo</option>
+                <option value="Kiabi">Kiabi</option>
               </select>
             </div>
           </div>
@@ -159,11 +167,56 @@ const Publish = ({ userToken }) => {
                 <option defaultValue>
                   Indique l'était de ton article
                 </option>
-                <option value="">Neuf avec étiquettes</option>
-                <option value="">Neuf sans étiquettes</option>
-                <option value="">Très bon état</option>
-                <option value="">Bon état</option>
-                <option value="">Satisfaisant</option>
+                <option value="Neuf avec étiquettes">Neuf avec étiquettes</option>
+                <option value="Neuf sans étiquettes">Neuf sans étiquettes</option>
+                <option value="Très bon état">Très bon état</option>
+                <option value="Bon état">Bon état</option>
+                <option value="Satisfaisant">Satisfaisant</option>
+              </select>
+            </div>
+          </div>
+    
+
+          <div className="card-horizontal">
+            <div className="left">
+              <b>Color</b>
+            </div>
+            <div className="right">
+              <select
+                name=""
+                id=""
+                onChange={(event) => setColor(event.target.value)}
+              >
+                <option defaultValue>
+                  Indiquez la couleur
+                </option>
+                <option value="Multicolore">Multicolore</option>
+                <option value="Vert">Vert</option>
+                <option value="Rouge">Rouge</option>
+                <option value="Jaune">Jaune</option>
+                <option value="Noir">Noir</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="card-horizontal">
+            <div className="left">
+              <b>City</b>
+            </div>
+            <div className="right">
+              <select
+                name=""
+                id=""
+                onChange={(event) => setCity(event.target.value)}
+              >
+                <option defaultValue>
+                  Indiquez la ville
+                </option>
+                <option value="Toulouse">Toulouse</option>
+                <option value="Paris">Paris</option>
+                <option value="Marseille">Marseille</option>
+                <option value="Strasbourg">Strasbourg</option>
+                <option value="Nantes">Nantes</option>
               </select>
             </div>
           </div>
