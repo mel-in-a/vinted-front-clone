@@ -2,6 +2,7 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useState } from "react"; // HOOKS
 
+
 const Checkoutform = ({ userId, title, price, token }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -12,6 +13,8 @@ const Checkoutform = ({ userId, title, price, token }) => {
 
   const handleSubmit = async (event) => {
       console.log("Coucou");
+      console.log("userId2" + userId);
+      console.log("title2" + title);
     try {
       event.preventDefault();
       // Récupérer les données du formulaire
@@ -25,7 +28,8 @@ const Checkoutform = ({ userId, title, price, token }) => {
 
       // TODO implémenter la fonction sur lebackend
 
-      const response = await axios.post("https://localhost:3000/payment", {
+      const response = await axios.post("https://maylina2021.herokuapp.com/pay", {
+       
         stripeToken: stripeResponse.token.id,
         price: product_price,
       });
@@ -41,7 +45,7 @@ const Checkoutform = ({ userId, title, price, token }) => {
 
   return (
     <div className="cart-container">
-      <form onSubmit={() => handleSubmit()}>
+      <form onSubmit={handleSubmit}>
         <div className="card">
           <p>Résumé de la commande</p>
           <div className="card-horizontal">

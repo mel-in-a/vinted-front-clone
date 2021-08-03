@@ -62,16 +62,35 @@ const Offer = (props) => {
             <div className="username">{data.owner.account.username}</div>
           </div>
 
-          <button
+          {/* <button
             className="btn-buy"
             onClick={() =>
               history.push("/cart", {
                 userId: data.owner._id,
-                title: data.title,
+                title: data.product_name,
                 token: token,
                 price: data.product_price,
               })
             }
+          >
+            Acheter
+          </button>
+ */}
+
+          <button
+            className="btn-buy"
+            onClick={() => {
+              if (token) {
+                history.push("/cart", {
+                  userId: data.owner._id,
+                  title: data.product_name,
+                  token: token,
+                  price: data.product_price,
+                });
+              } else {
+                history.push("/login");
+              }
+            }}
           >
             Acheter
           </button>
