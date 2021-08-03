@@ -38,7 +38,7 @@ const Cart = () => {
   };
 
   return (
-
+    <Elements stripe={stripePromise}>
     <div className="cart-container">
         <form onSubmit={() => handleSubmit()}>
           <div className="card">
@@ -74,22 +74,23 @@ const Cart = () => {
               <input type="text" name="" id="" placeholder="Numéro de carte" />
               <input type="text" name="" id="" placeholder="MM/YY / CVC" />
             </div> */}
-                  <Elements stripe={stripePromise}>
+               
             <CardElement />
-            </Elements>
+           
             <p>
               Il ne vous reste plus qu'une étape pour votre offrir
               <b> "article"</b>. <br />
               Vous allez payer <b>"total price"</b>
             </p>
 
+            
             <button type="submit pay-button">
               Pay
             </button>
           </div>
         </form>
     </div>
-   
+    </Elements>
   );
 };
 
