@@ -81,12 +81,14 @@ const Offer = (props) => {
             className="btn-buy"
             onClick={() => {
               if (token) {
-                history.push("/cart", {
+                history.push({pathname :"/cart", state: 
+                  {
                   userId: data.owner._id,
                   title: data.product_name,
                   token: token,
-                  price: data.product_price,
-                });
+                  price: data.product_price
+                }
+              });
               } else {
                 history.push("/login");
               }
